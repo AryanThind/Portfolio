@@ -1,0 +1,126 @@
+{
+  "profile": {
+    "name": "Aryan Thind",
+    "shortName": "Aryan",
+    "tagline": "I build systems that see the physical world and software that takes care of people.",
+    "role": "CS Student, Specializing in Machine Learning",
+    "specialization": "Computer Vision · AR · Nonprofit Software",
+    "location": "University of Maryland, College Park",
+    "bio": "I'm a computer science student at the University of Maryland studying machine learning, spending most of my time on two kinds of problems: getting software to understand physical space (AR, computer vision, sensor fusion), and building tools for organizations that need software to just work for real people. Recent work spans a first-responder AR system, an autonomous tracking drone, and the mobile app for a scoliosis nonprofit.",
+    "beyondCode": "Outside of building things, I've spent time teaching: as a TA for a high school programming lab, and as president of my school's United Sound chapter, playing alongside students with intellectual and developmental disabilities in the concert band.",
+    "social": {
+      "github": "https://github.com/AryanThind",
+      "linkedin": "https://www.linkedin.com/in/aryan-thind",
+      "email": "aryan.thind07@gmail.com",
+      "phone": "571-639-6209"
+    }
+  },
+  "skills": [
+    {
+      "name": "Languages",
+      "items": ["Swift", "Python", "TypeScript", "Java", "C", "HTML/CSS"]
+    },
+    {
+      "name": "Frameworks & Tools",
+      "items": ["ARKit", "RealityKit", "Node.js", "React", "JUnit"]
+    },
+    {
+      "name": "Environments",
+      "items": ["Xcode", "Visual Studio", "PyCharm", "IntelliJ", "Eclipse", "GitHub"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Scolios-US",
+      "role": "Lead Software Engineer App Developer",
+      "period": "July 2026 - Present",
+      "location": "Remote",
+      "summary": "Designing and building the nonprofit's iOS app pro bono, translating their existing mentor program and educational resources into a moderated mobile platform for kids, parents, and clinicians.",
+      "highlights": [
+        "Built three distinct account modes (kid, parent, clinician) with separate onboarding flows and COPPA-compliant parental consent for users under 13",
+        "Designed the full component system in SwiftUI with typography, color tokens, badge pills, card layouts from scratch",
+        "Implemented a moderated community forum, profile-based mentor matching, and a recovery timeline that feeds milestones into a shared events calendar"
+      ]
+    },
+    {
+      "company": "Pinterest",
+      "role": "Software Engineer, Career Development — Pinterest Engage Program",
+      "period": "March 2026 — June 2026",
+      "location": "Remote",
+      "summary": "A selective 4-month program pairing rising engineers with Pinterest SWEs to bridge classroom CS and industry practice.",
+      "highlights": [
+        "Partnered directly with experienced Pinterest engineers on real feature work for a collaborative platform",
+        "Learned how a large product team scopes, reviews, and ships design and engineering decisions together",
+        "Built technical and interpersonal habits for working on a real team, not just a solo project"
+      ]
+    },
+    {
+      "company": "STEM·E Youth Career Development Program",
+      "role": "Software Programmer Intern",
+      "period": "June 2024 — Feb. 2025",
+      "location": "Remote",
+      "summary": "Contributed to a student-mentor tutoring platform built for a global MIT alumni-run program.",
+      "highlights": [
+        "Built and styled frontend pages and UI components in HTML/CSS",
+        "Developed REST API endpoints in Node.js for backend logic and data flow",
+        "Integrated frontend and backend to support smooth student-mentor matching",
+        "Iterated on features based on direct user feedback"
+      ]
+    },
+    {
+      "company": "John Champe High School",
+      "role": "Teacher's Assistant",
+      "period": "Sep. 2024 — June 2025",
+      "location": "Aldie, VA",
+      "summary": "Supported a teacher and about 26 students in a programming lab, reinforcing core Java concepts.",
+      "highlights": [
+        "Ran small-group discussions for students who preferred working through a concept one-on-one",
+        "Reinforced programming fundamentals in Java for students who were stuck",
+        "Built the habit of explaining technical ideas without leaning on jargon"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "scolios-us",
+      "title": "Scolios-US App",
+      "subtitle": "Mentor matching & community app for a scoliosis nonprofit",
+      "description": "An ongoing, unpaid build for Scolios-US: a moderated mobile app connecting young scoliosis patients, their parents, and clinicians through mentor matching, a community forum, and a recovery timeline. I own both the design system and the SwiftUI build, including a COPPA-aware onboarding flow that changes based on account type.",
+      "stack": ["Swift", "SwiftUI"],
+      "role": "Designer & Developer",
+      "year": "2026",
+      "link": "https://github.com/AryanThind/Scolios-US",
+      "highlight": true
+    },
+    {
+      "id": "wallhax",
+      "title": "WallHax",
+      "subtitle": "Real-time multi-device AR for first responders",
+      "description": "1st place, AI/Data Science track at UVA Hoo Hacks. An iOS app using ARKit and RealityKit to stream live device poses over a network and render teammates as see-through avatars, with on-device LiDAR floor-plan generation and a web viewer for post-incident timeline playback.",
+      "stack": ["Swift", "Python", "TypeScript", "CSS"],
+      "role": "UI/UX & Core Concept",
+      "year": "2026",
+      "link": "https://github.com/HyunLee8/wallhax",
+      "highlight": true
+    },
+    {
+      "id": "gazer",
+      "title": "Gazer",
+      "subtitle": "Autonomous face-tracking drone for digital forensics",
+      "description": "A DJI Tello drone driven by a custom PID controller and YOLOv8 Nano for real-time face tracking, built as an unbiased autonomous observer for criminal investigations. Video streaming, flight control, and inference run as concurrent threads, with a Next.js control dashboard for live override.",
+      "stack": ["Python", "TypeScript", "YOLOv8"],
+      "role": "Computer Vision & Flight Control",
+      "year": "2026",
+      "link": "https://github.com/HyunLee8/auto-uav",
+      "highlight": false
+    }
+  ],
+  "education": [
+    {
+      "school": "University of Maryland, College Park",
+      "degree": "B.S., Computer Science — Specialization in Machine Learning",
+      "location": "College Park, MD",
+      "period": "Graduating May 2028"
+    }
+  ]
+}

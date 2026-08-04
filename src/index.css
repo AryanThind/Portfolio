@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0f1a;
+  --color-surface: #131826;
+  --color-surface-2: #1b2233;
+  --color-border: #262f45;
+  --color-ink: #edeff5;
+  --color-muted: #8b93a7;
+  --color-scan: #5eead4;
+  --color-warm: #f2994a;
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+section {
+  scroll-margin-top: 84px;
+}
+
+p,
+li {
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+::selection {
+  background: var(--color-scan);
+  color: var(--color-bg);
+}
+
+/* Eyebrow label with a small crosshair mark -- nods to CV/AR bounding-box
+   UI without leaning on numbered-step iconography that doesn't fit here. */
+.reticle-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-scan);
+}
+
+.reticle-label::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border: 1px solid currentColor;
+  transform: rotate(45deg);
+  flex: none;
+}
+
+/* Corner-bracket frame -- a viewfinder/AR-target treatment used sparingly
+   on the hero avatar and the highlighted project. */
+.bracket-frame {
+  position: relative;
+}
+.bracket-frame::before,
+.bracket-frame::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+}
+.bracket-frame::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--color-scan);
+  border-left: 2px solid var(--color-scan);
+}
+.bracket-frame::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid var(--color-scan);
+  border-right: 2px solid var(--color-scan);
+}
+
+/* Point-cloud / scan-grid background used once, behind the hero. */
+.scan-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--color-border) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 40%, transparent 85%);
+  opacity: 0.55;
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-scan), transparent);
+  opacity: 0.7;
+  animation: sweep 7s ease-in-out infinite;
+}
+
+@keyframes sweep {
+  0% {
+    top: 8%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    top: 92%;
+    opacity: 0;
+  }
+}
+
+.fade-up {
+  animation: fade-up 0.6s ease both;
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-line {
+    animation: none;
+    display: none;
+  }
+  .fade-up {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
